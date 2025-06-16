@@ -2,10 +2,22 @@
 :root{
     font-family:'Zain', sans-serif;
     --primary-color: #6EBDDB;
+    --primary-color-alpha: #6ebcdba6;
+
+    --principal-font-color:rgb(229, 229, 229);
+    --secondary-font-color: #9de3ff;
+    --strong-font-color: white;
+
     --white-color: #EBEFE5;
     --black-color:#251C28;
     --red-color:#EB2323;
+
+    --background-black-alpha:rgba(0, 0, 0, 0.5);
+    --background-black-alphaStrong:rgba(0, 0, 0, 0.5);
+
+    --white-shadow-color:rgba(255, 255, 255, 0.5);
 }
+
 
 *{
     margin:0;
@@ -23,6 +35,10 @@ body{
     background-attachment: fixed;
 }
 
+strong{
+    color:var(--strong-font-color);
+}
+
 header ul{
     position:fixed;
     z-index:100;
@@ -36,10 +52,10 @@ header ul{
     width:100vw;
     height:15vh;
 
-    background-color:rgba(0, 0, 0, 0.5);
+    background-color:var(--background-black-alpha);
 
     list-style: none;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px var(--white-shadow-color);
 
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);backdrop-filter:blur(10px);
@@ -74,37 +90,127 @@ header ul{
     .history{
         display:flex;
         flex-direction:column;
-        background:rgba(0, 0, 0, 0.5);
-        color:white;
+        background:var(--background-black-alpha);
+        color:var(--principal-font-color);
 
         width:50vw;
 
         text-align:center;
         
-        margin:200px 0 50px 50px;
+        margin:200px 0 200px 50px;
         padding:60px;
         
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         border: 2px solid var(--primary-color);
+        border-radius: 10px;
+        box-shadow: 0 0 10px var(--white-shadow-color);
 
         backdrop-filter: blur(16px) saturate(180%);
         -webkit-backdrop-filter: blur(16px) saturate(180%);backdrop-filter:blur(10px);
 
-        border-radius: 10px;
         font-size: 1.5rem;
         line-height: 1.5;
     }
 
     img{
         position: absolute;
-        scale:1;
+        scale:0.9;
         top: -20px;
-        right: 10px;
+        right: 30px;
         rotate:10deg;
 
-        width: 50vw;
-        height: 100vh;
+        height:700px;
 
         
     }
+}
+
+.section2{
+    display:flex;
+    justify-content: center;
+
+    .timeline{
+        display:flex;
+        flex-direction:column;
+        width:70vw;
+
+        background:var(--background-black-alpha);
+        color:var(--principal-font-color);
+
+
+        
+        padding:60px;
+        margin:0 0 200px 0;
+
+        border-radius: 10px;
+        border: 2px solid var(--primary-color);
+        box-shadow: 0 0 10px var(--white-shadow-color);
+        
+
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+
+        font-size: 1.5rem;
+        line-height: 1.5;
+        text-align:center;
+
+        hr{
+            width: 100%;
+            height: 1px;
+            background-color: var(--primary-color-alpha);
+            border: none;
+            margin: 20px 0;
+        }
+        p{
+            padding:0px 80px;
+        }
+    }
+}
+
+.section3{
+    position:absolute;
+    .img_oda{
+        img{
+        position:absolute;
+
+        width: 300px;
+        border:8px solid var(--white-color);
+        border-bottom:28px solid var(--white-color);
+        }
+
+        .image1{
+            rotate:10deg;
+            top:-50px;
+            left:250px;
+        }
+        .image2{
+            rotate:-10deg;
+            top:100px;
+            left:50px;
+        }
+    }
+
+    .about_oda{
+        display:flex;
+        flex-direction:column;
+        color:var(--principal-font-color);
+
+        width:50vw;
+        padding:50px 70px;
+        margin:0 50px 200px 500px;
+
+        text-align:center;
+        font-size:1.5em;
+
+        border-radius:10px;
+        border:2px solid var(--primary-color);
+        box-shadow: 0 0 10px var(--white-shadow-color);
+
+        background:var(--background-black-alpha);
+        backdrop-filter: blur(16px) saturate(180%);
+        --webkit-backdrop-filter: blur(16px) saturate(180%);
+
+
+        
+    }
+
 }
